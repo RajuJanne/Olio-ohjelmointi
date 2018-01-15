@@ -1,9 +1,9 @@
 Tila:
-a) laivan v‰ri
-c) laivan kannn pituus
-f) laivan hyttien lukum‰‰r‰
+a) laivan v√§ri
+c) laivan kannen pituus
+f) laivan hyttien lukum√§√§r√§
 
-K‰ytt‰ytyminen:
+K√§ytt√§ytyminen:
 b) aivan nopeuden hidastaminen 5 solmua tunnissa
 d) laivan peruuttaminen satamalaituriin
-e) laivan moottorien k‰ynnist‰minen
+e) laivan moottorien k√§ynnist√§minen
