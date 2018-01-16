@@ -1,0 +1,9 @@
+Tila:
+a) laivan väri
+c) laivan kannen pituus
+f) laivan hyttien lukumäärä
+
+Käyttäytyminen:
+b) aivan nopeuden hidastaminen 5 solmua tunnissa
+d) laivan peruuttaminen satamalaituriin
+e) laivan moottorien käynnistäminen

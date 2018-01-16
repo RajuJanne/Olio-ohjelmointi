@@ -1,0 +1,4 @@
+X.MuutaNimi("Olli","Osaaja");
+Y.Ilmoittaudu(X.Tunnus);
+X.NaytaNimi();
+Y.NaytaIlmoittautuneet();

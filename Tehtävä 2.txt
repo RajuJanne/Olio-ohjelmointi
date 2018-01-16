@@ -1,8 +1,0 @@
-a)
-piirraYmpyra(int koko, string vari);
-piirraKolmio(int koko, string vari);
-
-b)
-luetteloiOsallisujat()
-naytaNimi()
-naytaNumero()
