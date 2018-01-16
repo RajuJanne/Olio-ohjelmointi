@@ -17,6 +17,7 @@ namespace Harjoitus1_tehtävä5
       {
         Write("Piirrän sinulle JouluKuusen, anna koko (vähintään 3): ");
         syote = ReadLine();
+
         if (TarkistaSyote(syote) is true)
         {
           koko = int.Parse(syote);
@@ -64,7 +65,6 @@ namespace Harjoitus1_tehtävä5
       {
         Write("*");
       }
-      // Rivin tähtien tulostuksen jälkeen vaidetaan riviä
       WriteLine();
     }
 
@@ -82,7 +82,7 @@ namespace Harjoitus1_tehtävä5
         maara--;
         lkm += 2;
       }
-      //Tulostetaan jalka rumalla tavalla olemassaolevia metodeja käyttäen.
+      //Tulostetaan jalka
       for (int i = 0; i < 2; i++)
       {
         TulostaTyhjaa(koko - 2);

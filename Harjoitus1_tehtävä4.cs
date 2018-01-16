@@ -10,12 +10,10 @@ namespace Tehtava_4
   {
     static void Main(string[] args)
     {
-      // alustetaan muuttuja koko
-      int   koko;
+      int koko;
       Write("Piirrän sinulle kolmion. Miten suuren haluat? ");
       koko = int.Parse(System.Console.ReadLine());
       WriteLine("");
-      //System.Threading.Thread.Sleep(10000);
       TulostaKolmio(koko);
       // pyydetään käyttäjältä syöte,
       // jotta konsoli pysyy auki tulostuksen jälkeen
@@ -23,7 +21,7 @@ namespace Tehtava_4
     }
 
     static void TulostaTyhjaa(int maara) {
-      // Tämä metodi on kirjaimellisesti tyhjän toimittaja.
+      // Tämä metodi on kirjaimellisesti tyhjäntoimittaja.
       for (int i = 0; i < maara; i++ ) {
         Write(" ");
       }
@@ -33,8 +31,7 @@ namespace Tehtava_4
       for (int i = 0; i < lkm; i++) {
         Write("*");
       }
-      // WriteLinellä saadaan seuraava rivi menemään oikeaan paikkaan
-      WriteLine("");
+      WriteLine(""); //Tähtiä seuraa aina rivinvaihto
     }
     static void TulostaKolmio(int koko) {
       // Tiedetään, että ensimmäisellä rivillä on 0 tyhjää
@@ -49,6 +46,5 @@ namespace Tehtava_4
         lkm--;
       }
     }
-
   }
 }
