@@ -1,0 +1,67 @@
+Ohjelma keskusmuistissa
+  {
+  Kaksi toimintaperiaatteiltaan erilaista muistialuetta:
+  * Pinomuisti eli stack
+    * Käydään läpi siististi pala kerrallaan
+    * Sisältää kaikki muuttujat
+      * Muuttujan sisältämä data voi olla heapissa
+    * stackia siivotaan metodien suorittamisen loppuessa
+  * Kasamuisti eli heap
+    * Epämääräinen läjä eri dataa, joiden osoitteet talletetaan stackiin
+    * GarbageCollector siivoaa heapin aikanaan automaattisesti
+
+  Muuttujia on kahta tyyppiä: arvo ja viite.
+    Arvo-tyyppisen muuttujan tieto tallennetaan stackiin (esim. int)
+    Viite-tyyppisen muuttujan tieto tallennetaan heapiin, ja heapin osoite stackiin. (esim. string)
+
+  C# ja Java -ohjelmoinnissa muistin käsittely on ohjelmoijalle helppoa.
+  (C-kielessä muistia pitää hallita käsin koodissa.)
+  Tarpeeton muistialue tyhjennetään automaattisesti.
+  }
+
+Vahva vs. heikko tyypitys
+  {
+  Vahva tyypitys (esim C#)
+  * Jokainen muuttuja ja metodin paluuarvo on tyypitettävä etukäteen
+  * Tyyppiä ei voi vaihtaa suoritusaikana
+  * Väljyyttä tyypitykseen saadaan käyttämällä tyypitykseen rajapintoja
+  * Monipuolisuutta tyyppeihin saadaan tyyppiparametrien avulla
+    * Geneeriset tyypit
+
+  Heikko tyypitys (esim. JavaScript ja monet muut scripitikielet)
+  * Muuttujia ja metodin paluuarvoja ei tyypitetä etukäteen
+  * Tyyppi määräytyy sijoitettavan tai palautettavan olion mukaan
+  * Muuttujan tyyppi voi vaihtua algoritmin suorituksen aikana.
+}
+
+Tyyppi
+  {
+   Tyyppinä käytetään seuraavia
+   * Luokka eli class
+   * Rajapinta eli interface
+   * Rakenne eli struct
+      * Melkein kuin luokka, eroaa muistikäsittelyssä
+    * Taulukkotyyppi eli array
+    * Luettelotyyppi eli enum
+    * Delegaattityyppi eli delegate
+
+   Tyypeissä voidaan käyttää myös ns. tyyppimuuttujia, jolloin tyypit ovat geneerisiä
+    * Generic type
+  }
+
+Tyyppiyhteensopivuus
+  {
+  Tyyppiyhteensopivuus tarkoittaa, että tietyn tyyppiseen muuttujaan
+  voidaan sijoittaa tyyppiyhteensopiva olio (arvo)
+  * Esimerkiksi double-tyyppiseen muuttujaan voidaan sijoittaa int arvo
+
+  Jos muuttujan tyyppinä on luokka, siihen voidaan sijoittaa
+  luokan tai sen kantaluokan (jatkuu rekursiivisesti) olio
+}
+
+Tyypin muunnos
+  {
+  Oliosta voidaan tyypin muunnoksella tuottaa toisen tyypinen olio
+
+
+  }
