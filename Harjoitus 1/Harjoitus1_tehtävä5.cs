@@ -11,20 +11,21 @@ namespace Harjoitus1_tehtävä5
     static void Main(string[] args)
     {
       string syote;
-      int koko;
+      int korkeus;
 
       do
       {
-        Write("Piirrän sinulle JouluKuusen, anna koko (vähintään 3): ");
+        Write("Piirrän sinulle JouluKuusen, anna korkeus (vähintään 3): ");
         syote = ReadLine();
 
         if (TarkistaSyote(syote) is true)
         {
-          koko = int.Parse(syote);
+          korkeus = int.Parse(syote);
           break;
         }
       } while (true);
-      JouluKuusi(koko);
+      WriteLine(); // Näyttää kivemmalta kun jätetään rivi väliä ennen kuusta
+      JouluKuusi(korkeus);
       ReadKey();
     }
 
@@ -68,14 +69,14 @@ namespace Harjoitus1_tehtävä5
       WriteLine();
     }
 
-    static void JouluKuusi(int koko)
+    static void JouluKuusi(int korkeus)
     {
       //Tiedetään, että ensimmäisellä rivillä on aina yksi tähti
       //Samoin tiedetään, että jokaisella rivillä on yksi välilyönti vähemmän ja kaksi tähteä enemmän
-      //Näistä voidaan päätellä, että ensimmäisellä rivillä on aina "${koko} - 1" määrä välilyöntejä
-      int maara = koko - 1;
+      //Näistä voidaan päätellä, että ensimmäisellä rivillä on aina "${korkeus} - 1" määrä välilyöntejä
+      int maara = korkeus - 1;
       int lkm = 1;
-      for (int i = 0; i < koko; i++)
+      for (int i = 0; i < korkeus; i++)
       {
         TulostaTyhjaa(maara);
         TulostaTahtia(lkm);
@@ -85,7 +86,7 @@ namespace Harjoitus1_tehtävä5
       //Tulostetaan jalka
       for (int i = 0; i < 2; i++)
       {
-        TulostaTyhjaa(koko - 2);
+        TulostaTyhjaa(korkeus - 2);
         TulostaTahtia(3);
       }
     }
