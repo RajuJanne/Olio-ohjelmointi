@@ -26,11 +26,7 @@ namespace Luento20180126
             {
                 WriteLine(pvm.AddDays(i).ToShortDateString());
             }
-            
-        }
-        static bool OnJaollinen(int jaettava, int jakaja)
-        {
-            return jaettava % jakaja == 0;
+
         }
     }
 }
