@@ -34,16 +34,16 @@ namespace Tehtava_4
       WriteLine(""); //Tähtiä seuraa aina rivinvaihto
     }
     static void TulostaKolmio(int koko) {
-      // Tiedetään, että ensimmäisellä rivillä on 0 tyhjää
-      // ja tähtien määrä == koko
-      int maara = 0;
-      int lkm = koko;
+      // Tiedetään, että ensimmäisellä rivillä on koko - 1 tyhjaa
+      // ja tähtien määrä on yksi
+      int maara = koko - 1;
+      int lkm = 1;
 
       for (int i = 0; i < koko; i++) {
         TulostaTyhjaa(maara);
         TulostaTahtia(lkm);
-        maara++;
-        lkm--;
+        maara--;
+        lkm++;
       }
     }
   }
