@@ -1,6 +1,8 @@
 a)
-piirraYmpyra(int koko, string vari);
-piirraKolmio(int koko, string vari);
+piirraYmpyra(yKoko):
+ympyranVari(yVari);
+piirraKolmio(kKoko);
+kolmionVari(kVari);
 
 b)
 luetteloiOsallisujat()
