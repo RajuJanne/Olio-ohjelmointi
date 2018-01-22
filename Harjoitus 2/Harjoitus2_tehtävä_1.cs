@@ -24,48 +24,48 @@ namespace H2_Tehtava_1
               x = (int)y; // Long ei mene intiin ilman muunnosta
               WriteLine(x);
             }
-            if (valinta == "b") {
+            else if (valinta == "b") {
               y = (long)d; // y == 4
               WriteLine(y);
             }
-            if (valinta == "c") {
+            else if (valinta == "c") {
               d = x;
               WriteLine(d);
             }
-            if (valinta == "d") {
+            else if (valinta == "d") {
               x = c;
               WriteLine(x);
             }
-            if (valita == "e") {
+            else if (valita == "e") {
               s = $"{x}"; // lul?
               WriteLine(s);
             }
-            if (valinta == "f") {
+            else if (valinta == "f") {
               x = int.Parse(s); // string ei mene intiin ilman muunnosta
               WriteLine(x);
             }
-            if (valinta == "g") {
+            else if (valinta == "g") {
               b = x > y;
               WriteLine(b);
             }
-            if (valinta == "h") {
+            else if (valinta == "h") {
               s = $"{t}"; //
               WriteLine(s);
             }
-            if (valinta == "i")
+            else if (valinta == "i")
             {
               o = t;
               WriteLine(o);
             }
-            if (valinta == "j") {
+            else if (valinta == "j") {
               o = x;
               WriteLine(o);
             }
-            if (valinta == "k") {
+            else if (valinta == "k") {
               r = o;
               WriteLine(r);
             }
-            if (valinta == "l")
+            else if (valinta == "l")
             {
               b = o;
               WriteLine(b);
