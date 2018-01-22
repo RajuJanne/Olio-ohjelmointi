@@ -18,30 +18,58 @@ namespace H2_Tehtava_1
             DateTime t = new DateTime(1917, 12, 6);
             Random r = new Random();
 
-            x = (int)y; // Long ei mene intiin ilman muunnosta
-            WriteLine(x);
-            y = (long)d; // y == 4
-            WriteLine(y);
-            d = x;
-            WriteLine(d);
-            x = c;
-            WriteLine(x);
-            s = $"{x}"; // lul?
-            WriteLine(s);
-            x = int.Parse(s); // string ei mene intiin ilman muunnosta
-            WriteLine(x);
-            b = x > y;
-            WriteLine(b);
-            s = $"{t}"; //
-            WriteLine(s);
-            o = t;
-            WriteLine(o);
-            o = x;
-            WriteLine(o);
-            r = o;
-            WriteLine(r);
-            b = o;
-            WriteLine(b);
+            string valinta = ReadLine("Anna alakohta (a-l): ");
+
+            if (valinta == "a") {
+              x = (int)y; // Long ei mene intiin ilman muunnosta
+              WriteLine(x);
+            }
+            if (valinta == "b") {
+              y = (long)d; // y == 4
+              WriteLine(y);
+            }
+            if (valinta == "c") {
+              d = x;
+              WriteLine(d);
+            }
+            if (valinta == "d") {
+              x = c;
+              WriteLine(x);
+            }
+            if (valita == "e") {
+              s = $"{x}"; // lul?
+              WriteLine(s);
+            }
+            if (valinta == "f") {
+              x = int.Parse(s); // string ei mene intiin ilman muunnosta
+              WriteLine(x);
+            }
+            if (valinta == "g") {
+              b = x > y;
+              WriteLine(b);
+            }
+            if (valinta == "h") {
+              s = $"{t}"; //
+              WriteLine(s);
+            }
+            if (valinta == "i")
+            {
+              o = t;
+              WriteLine(o);
+            }
+            if (valinta == "j") {
+              o = x;
+              WriteLine(o);
+            }
+            if (valinta == "k") {
+              r = o;
+              WriteLine(r);
+            }
+            if (valinta == "l")
+            {
+              b = o;
+              WriteLine(b);
+            }
             ReadLine();
         }
     }
