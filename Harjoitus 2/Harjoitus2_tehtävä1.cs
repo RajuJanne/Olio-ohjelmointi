@@ -69,6 +69,9 @@ namespace H2_Tehtava_1
             {
               b = o;
               WriteLine(b);
+            }else
+            {
+              WriteLine("Ei toi luetunymmärtäminen ainakaan o sun vahvuutes.");
             }
             ReadLine();
         }
