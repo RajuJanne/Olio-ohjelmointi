@@ -1,0 +1,10 @@
+Poikkeusolio
+{
+  Ohjelman suorituksessa voi syntyä virhetilanne, josta suoritusta ei voida normaalisti jatkaa.
+    Esimerkiksi viitataan muuttujaa, jolla ei ole arvoa.
+  Tällaisessa tilanteessa syntyy erityinen poikkeusolio
+    Poikkeusoliot ovat exception-tyyppiä tai siitä periytettyätyyppiä (esim. DividedbyZeroException).
+    Poikkeusolio voidaan luoda myös ohjelmakoodissa normaalien olioiden tapaan (operaattorilla new).
+
+
+}

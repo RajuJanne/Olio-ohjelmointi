@@ -16,7 +16,8 @@ namespace Luento20180124
             Demo1();
             ReadLine();
         }
-        private enum VuodenAika
+        //rinnastuu luokkaan
+        private enum VuodenAika 
         {
             Talvi = 1,
             Kevat = 2,
