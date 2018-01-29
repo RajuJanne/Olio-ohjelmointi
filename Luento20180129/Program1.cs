@@ -51,6 +51,10 @@ namespace L0129
             {
                 WriteLine(e.Message);
             }
+            finally
+            {
+              WriteLine("Käsittely päättynyt.");
+            }
         }
     }
 }
