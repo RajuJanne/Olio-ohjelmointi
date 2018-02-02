@@ -1,7 +1,7 @@
 using System;
 using static System.Console;
 
-namespace H2_Tehtava_1
+namespace H2T1
 {
     class Program
     {
@@ -75,12 +75,12 @@ namespace H2_Tehtava_1
             }
             else if (valinta == "k")
             {
-                r = o;
+                r = (Random)o;
                 WriteLine(r);
             }
             else if (valinta == "l")
             {
-                b = o;
+                b = Convert.ToBoolean(o);
                 WriteLine(b);
             }
             else
