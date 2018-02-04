@@ -113,6 +113,7 @@ namespace H3T4_5
         static string SyntymaAika(string syntA)
         {
             string SyntymaAika = "";
+            string merkki = Vuosisata(syntA.Substring(6, 1));
             bool bpaiva = Int32.TryParse(syntA.Substring(0, 2), out int paiva);
             bool bkuu = Int32.TryParse(syntA.Substring(2, 2), out int kuu);
             bool bvuosi = Int32.TryParse(syntA.Substring(4, 2), out int vuosi);
@@ -123,12 +124,8 @@ namespace H3T4_5
             }
 
             // tehdään syntymäajasta muotoa pp.kk.vvvv
-            SyntymaAika = syntA.Substring(0, 2);
-            SyntymaAika = SyntymaAika + ".";
-            SyntymaAika = SyntymaAika + syntA.Substring(2, 2);
-            SyntymaAika = SyntymaAika + ".";
-            SyntymaAika = SyntymaAika + Vuosisata(syntA.Substring(6,1));
-            SyntymaAika = SyntymaAika + syntA.Substring(4, 2);
+
+            SyntymaAika = $"{paiva}.{kuu}.{merkki}{vuosi}";
 
             return SyntymaAika;
         }
