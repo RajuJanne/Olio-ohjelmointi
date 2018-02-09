@@ -10,15 +10,15 @@ namespace H3T2
     {
         static void Main(string[] args)
         {
-            ViikonPaiva paiva;
-            do {
+            do
+            {
                 try
                 {
                     Write("Anna luku väliltä 1-7: ");
                     int numero = Convert.ToInt32(Console.ReadLine());
                     if (numero >= 1 && numero <= 7)
                     {
-                        paiva = (ViikonPaiva)numero;
+                        ViikonPaiva paiva = (ViikonPaiva)numero;
                         WriteLine($"Lukua {numero} vastaa päivä {paiva}.");
                         ReadLine();
                         break;
@@ -34,16 +34,14 @@ namespace H3T2
                 }
                 catch (OverflowException)
                 {
-                    WriteLine("Ei tommone mahu ees integeriin kaveri.");
+                    WriteLine("Aivan liian suuri!");
                 }
                 catch (Exception e)
                 {
                     WriteLine(e.Message);
                 }
-
             } while (true);
         }
-
         public enum ViikonPaiva
         {
             Maanantai = 1,
