@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Globalization;
 using static System.Console;
 
@@ -17,7 +17,7 @@ namespace Helpers
             bool onnistuuko = int.TryParse(ReadLine(), out int kokonaisluku);
 
             try
-            {                
+            {
                 if (!onnistuuko)
                 {
                     throw new Exception("Syöte ei ole kelvollinen kokonaisluku.");
@@ -122,41 +122,21 @@ namespace Helpers
         {
             do
             {
-                try
-                {
-                    // return lopettaa metodin suorittamisen, joten sitä voidaan efektiivisesti käyttää break komentona.
-                    return Kokonaisluku(kehote, min, max);
-                }
-                catch
-                {
-                    // täällä ei varsinaisesti haluta tehdä mitään.
-                    // virheteksti tulostetaan jo Kokonaisluku-metodissa.
-                    // lisäksi tätä metodia halutaan ajaa kunnes saadaan kelvollinen luku, joten poikkeuksen heittäminen ylemmälle
-                    // tasolle ei ole halutun toiminnan kannalta mielekästä..?
-                }
+                // return lopettaa metodin suorittamisen, joten sitä voidaan efektiivisesti käyttää break komentona.
+                return Kokonaisluku(kehote, min, max);
+                // Tällä tasolla ei ole varsinaisesti mitään syytä implementoida vikasietoisuutta, sillä se on jo 
+                // tehty Kokonaisluku-metodissa.
             } while (true);
         }
+
         public static double DesimaaliPakoittaen(string kehote, int tarkkuus = -1)
         {
-            do
-            {
-                try
-                {
-                    return Desimaaliluku(kehote, tarkkuus);
-                }
-                catch { }
-            } while (true);
+            do { return Desimaaliluku(kehote, tarkkuus); } while (true);
         }
+
         public static DateTime PaivaysPakoittaen(string kehote)
         {
-            do
-            {
-                try
-                {
-                    return Paivays(kehote);
-                }
-                catch { }
-            } while (true);
+            do { return Paivays(kehote); } while (true);
         }
     }
 }
