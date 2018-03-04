@@ -1,5 +1,3 @@
-// EI TOIMIVA
-
 using System;
 using System.Globalization;
 using static System.Console;
@@ -18,25 +16,17 @@ namespace Helpers
 
             bool onnistuuko = int.TryParse(ReadLine(), out int kokonaisluku);
 
-            try
+            if (!onnistuuko)
             {
-                if (!onnistuuko)
-                {
-                    throw new Exception("Syöte ei ole kelvollinen kokonaisluku.");
-                }
-                else if (kokonaisluku < min || kokonaisluku > max)
-                {
-                    throw new Exception($"Syöte ei ole kelvollinen kokonaisluku. Minimi on {min}. Maksimi on {max}.");
-                }
-                else
-                {
-                    return kokonaisluku;
-                }
+                throw new Exception("Syöte ei ole kelvollinen kokonaisluku.");
             }
-            catch (Exception e)
+            else if (kokonaisluku < min || kokonaisluku > max)
             {
-                WriteLine(e.Message);
-                throw e;
+                throw new Exception($"Syöte ei ole kelvollinen kokonaisluku. Minimi on {min}. Maksimi on {max}.");
+            }
+            else
+            {
+                return kokonaisluku;
             }
         }
 
@@ -46,22 +36,14 @@ namespace Helpers
 
             bool onnistuuko = double.TryParse(ReadLine(), out double desimaaliluku);
 
-            try
+            if (onnistuuko)
             {
-                if (onnistuuko)
-                {
-                    desimaaliluku = (tarkkuus > -1) ? Math.Round(desimaaliluku, tarkkuus) : desimaaliluku;
-                    return desimaaliluku;
-                }
-                else
-                {
-                    throw new Exception("Syöte ei ole kelvollinen desimaaliluku.");
-                }
+                desimaaliluku = (tarkkuus > -1) ? Math.Round(desimaaliluku, tarkkuus) : desimaaliluku;
+                return desimaaliluku;
             }
-            catch (Exception e)
+            else
             {
-                WriteLine(e.Message);
-                throw e;
+                throw new Exception("Syöte ei ole kelvollinen desimaaliluku.");
             }
         }
 
@@ -71,21 +53,13 @@ namespace Helpers
 
             bool onnistuuko = char.TryParse(ReadLine(), out char merkki);
 
-            try
+            if (onnistuuko)
             {
-                if (onnistuuko)
-                {
-                    return merkki;
-                }
-                else
-                {
-                    throw new Exception("Syöte ei ole kelvollinen merkki");
-                }
+                return merkki;
             }
-            catch (Exception e)
+            else
             {
-                WriteLine(e.Message);
-                throw e;
+                throw new Exception("Syöte ei ole kelvollinen merkki");
             }
         }
 
@@ -106,16 +80,8 @@ namespace Helpers
 
             bool onnistuuko = DateTime.TryParse(ReadLine(), out DateTime paivays);
 
-            try
-            {
-                return (onnistuuko) ? paivays : throw new Exception("Syöte ei ole kelvollinen päiväys.");
-                // Onko tämä nyt sitä syntaksisokeria? Kirjoittajalla on likainen olo.
-            }
-            catch (Exception e)
-            {
-                WriteLine(e.Message);
-                throw e;
-            }
+            return (onnistuuko) ? paivays : throw new Exception("Syöte ei ole kelvollinen päiväys.");
+            // Onko tämä nyt sitä syntaksisokeria? Kirjoittajalla on likainen olo.
         }
 
         // Aloitetaan Tehtävä 3
@@ -124,21 +90,44 @@ namespace Helpers
         {
             do
             {
-                // return lopettaa metodin suorittamisen, joten sitä voidaan efektiivisesti käyttää break komentona.
-                return Kokonaisluku(kehote, min, max);
-                // Tällä tasolla ei ole varsinaisesti mitään syytä implementoida vikasietoisuutta, sillä se on jo 
-                // tehty Kokonaisluku-metodissa.
+                try
+                {
+                    return Kokonaisluku(kehote, min, max);
+                }
+                catch (Exception e)
+                {
+                    WriteLine(e.Message);
+                }
             } while (true);
         }
 
         public static double DesimaaliPakoittaen(string kehote, int tarkkuus = -1)
         {
-            do { return Desimaaliluku(kehote, tarkkuus); } while (true);
+            do
+            {
+                try
+                {
+                    return Desimaaliluku(kehote, tarkkuus);
+                }
+                catch (Exception e)
+                {
+                    WriteLine(e.Message);
+                }
+            } while (true);
         }
 
         public static DateTime PaivaysPakoittaen(string kehote)
         {
-            do { return Paivays(kehote); } while (true);
+            do {
+                try
+                {
+                    return Paivays(kehote);
+                }
+                catch (Exception e)
+                {
+                    WriteLine(e.Message);
+                }
+            } while (true);
         }
     }
 }
