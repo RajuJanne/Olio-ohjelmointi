@@ -26,8 +26,11 @@ namespace H5T1
         // Jokalaista syntaksia oppimismielessä.
         public DateTime SyntymaAika { get { return _SyntymaAika; } set => _SyntymaAika = value; }
 
-
-        public int Ika { get => (int)((DateTime.Now - _SyntymaAika).TotalDays / 365.242199); }
+		// Seuraavassa lasketaan nykyhetken ja _SyntymaAika muuttujan erotuksesta TimeSpan olio, joka muutetaan double tyyppiseksi paivien määräksi.
+		// Saatu päivien määrä jaetaan vuoden pituudella.
+		// Tulos muunnetaan integeriksi, jolloin saadaan kätevästi vain täydet vuodet.
+		// Vuoden pituus päivinä lähde: NASA https://pumas.jpl.nasa.gov/files/04_21_97_1.pdf
+        public int Ika { get => (int)((DateTime.Now - _SyntymaAika).TotalDays / 365.2421875); }
 
         public override string ToString()
         {
