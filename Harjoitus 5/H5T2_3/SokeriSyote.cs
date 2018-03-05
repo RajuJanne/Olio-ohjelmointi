@@ -35,7 +35,7 @@ namespace SyntaksiSokeri
         {
             Write(kehote);
             string syote = ReadLine();
-            return syote;
+            return syote ?? throw new Exception("Syöte ei saa olla tyhjä");
         }
 
         public static DateTime Paivays(string kehote)
