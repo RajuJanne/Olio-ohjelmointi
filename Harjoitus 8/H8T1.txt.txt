@@ -1,0 +1,21 @@
+A)
+
+a. 	false
+b. 	false
+c. true
+d. 	false
+e. true
+f. true
+
+
+B)
+
+a. true
+b. 	false
+c. true
+d. true
+e. true
+f. true
+g. true
+h. 	false
+i. 	false
